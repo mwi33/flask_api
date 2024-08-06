@@ -1,11 +1,13 @@
-import json
+# import flask libraries
 from flask import Flask
 
+# create an instance of the class
 app = Flask(__name__)
 
-@app.route('/hello/', methods=['GET', 'POST'])
-def welcome():
-    return "Hello World"
+# the app.route decorator is used to tell flask what URL should trigger the function
+@app.route('/hello/')
+def hello():
+    return "Hello, World"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
